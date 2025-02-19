@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import { IoMdMic } from "react-icons/io";
 import { RiVideoAddLine } from "react-icons/ri";
 
-function Header() {
+function Header({isLoggedIn}) {
   return (
     <div className="flex fixed w-[100%] top-0 bg-white justify-between px-6 py-2">
       <div className="flex items-center space-x-5">
@@ -29,11 +29,12 @@ function Header() {
           className="rounded-full m-3 border p-2 bg-gray-100 cursor-pointer hover:bg-gray-200 duration-200"
         />
       </div>
-      <div className="flex space-x-5 items-center">
+      {isLoggedIn ? 
+      (<div className="flex space-x-5 items-center">
         <RiVideoAddLine className="text-2xl cursor-pointer" />
         <AiOutlineBell  className="text-2xl cursor-pointer"/>
         <Avatar src="./logo.png" size="32" round={true} className="cursor-pointer"/> 
-      </div>
+      </div>) : (<button >login</button>)}
     </div>
   );
 }
