@@ -59,15 +59,16 @@ PK Hub is a YouTube-like video-sharing platform that allows users to upload, wat
 ### 1️⃣ Clone Repository
 ```sh
 git clone https://github.com/piyush-773/Pk-Hub.gitcd server
-cd Pk-Hub
 ```
 
 ### 2️⃣ Install Dependencies
 ```sh
-cd ..
+cd Pk-Hub
 cd client
 npm install  # For Frontend
-cd pk-hub
+cd ..
+cd server
+npm install  # For Backend
 ```
 
 ### 3️⃣ Start Development Server
